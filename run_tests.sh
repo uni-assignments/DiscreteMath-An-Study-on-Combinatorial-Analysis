@@ -1,13 +1,13 @@
 EXEC=$1
 TMP_OUT=$2
 
-for i in {0..9..1}; do
+for i in {0..2..1}; do
   testname=$(printf "%01d" $i)
   $EXEC < ./../tests/$testname.in > $TMP_OUT
   if ! diff -qwB ./../tests/$testname.out $TMP_OUT &>/dev/null; then
-    echo "Test $testname failed"
+    echo "Test $testname falhou"
   else
-    echo "Test $testname passed"
+    echo "Test $testname passou"
   fi
 done
 rm $TMP_OUT
