@@ -1,0 +1,13 @@
+Instruções de compilação e execução:
+
+Para a compilação do programa basta a utilização do Makefile presente dentro da pasta do projeto executando o comando make no diretório. 
+Existe alguns casos teste implementados na pasta in, para a utilização: make test;
+
+
+O algoritmo foi implementado e testado em um ambiente linux Ubuntu:
+
+    Distributor ID:	Ubuntu
+    Description:	Ubuntu 18.04.5 LTS
+    Release:	18.04
+    Codename:	bionic
+    Compilador gcc 7.5.0 
