@@ -48,6 +48,26 @@ int ceasars_legions(int n1, int n2, int sf, int sh){
 }
 
 
+char *greedy_response(int n1, int n2, int k1, int k2){
+    
+    int size = n1 + n2, aux1 = k1, aux2 = k2;
+    char *resp = (char*)malloc(size*sizeof(char));
+    
+    for (size_t i = 0; i < size; i++){
+        if(n1 < n2 && aux1 > 0){
+            resp[i] = 'S';
+            aux2 = k2;
+            aux1--;
+        }
+        else {
+            resp[i] = 'C';
+            aux1 = k1;
+            aux2--;
+        }
+    }
+    return resp;
+}
+
 int main(){
     scanf("%d %d %d %d", &n1, &n2, &k1, &k2);
     memo = generate_memoization_matrix(n1 + 1, n2 + 1, k1 + 1, k2 + 1);
